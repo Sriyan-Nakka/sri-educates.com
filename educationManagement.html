@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sri-Educates Telangana Management</title>
+  </head>
+  <link
+    rel="icon"
+    href="https://res.cloudinary.com/dxcywxeqq/image/upload/v1715439791/mfpy39b9tc4o2ure1whx.png"
+  />
+  <style>
+    @font-face {
+      font-family: "loginFont";
+      src: url("https://res.cloudinary.com/dxcywxeqq/raw/upload/v1716090661/Phudu-VariableFont_wght_ck0y89.ttf");
+    }
+    img {
+      width: 60%;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-image: url("https://images.pexels.com/photos/2831794/pexels-photo-2831794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      text-align: center;
+      font-size: 20px;
+      font-family: "loginFont", sans-serif;
+    }
+    #loginFormContainer {
+      border: 5px solid yellow;
+      border-radius: 20px;
+      padding-bottom: 10px;
+      text-align: center;
+      background-color: rgba(0, 0, 128, 0.9);
+    }
+    button {
+      font-size: 26px;
+      font-family: "loginFont", sans-serif;
+      border-radius: 12px;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+    #formContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-decoration: underline;
+    }
+    #staffForm,
+    #studentDiv,
+    #staffDiv {
+      display: none;
+    }
+    #staffDiv,
+    #studentDiv {
+      border: 5px solid yellow;
+      border-radius: 18px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    hr {
+      color: yellow;
+      background-color: yellow;
+      height: 3px;
+    }
+    ul {
+      text-align: left;
+    }
+    li::marker {
+      content: "➡️ ";
+    }
+    footer {
+      background-color: rgb(0, 0, 0, 0.9);
+      border: 3px solid yellow;
+      border-radius: 15px;
+    }
+    a {
+      color: aqua;
+    }
+    a:hover {
+      color: aquamarine;
+    }
+    #submitAdmissionButton {
+      font-size: 20px;
+      color: white;
+      background-color: green;
+      font-family: "loginFont", sans-serif;
+      border-radius: 12px;
+    }
+  </style>
+  <body text="yellow">
+    <script src="script.js" defer></script>
+    <!-- code before transformation -->
+    <div id="body">
+      <div id="loginFormContainer">
+        <h1>Sri-Educations Telangana Management</h1>
+        <hr />
+        <div id="modeContainer">
+          <h3>
+            Before you can enter this website, you need to specify who you are:
+          </h3>
+          <button id="staffButton">Staff</button> <br />
+          <br />
+          <button id="studentButton">Student/Parent</button>
+        </div>
+
+        <div id="staffForm">
+          <h1>Login Page</h1>
+
+          <div id="loginForm">
+            <label for="username">User name:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+            /><br /><br />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+            /><br /><br />
+
+            <label for="branch">Branch: </label>
+            <input type="text" id="branch" name="branch" required /><br /><br />
+
+            <button id="submit">Login</button>
+
+            <p id="info"></p>
+          </div>
+        </div>
+      </div>
+      <!-- staff div -->
+      <div id="staffDiv">
+        <h1>Sri-Educations Telangana Management</h1>
+        <hr />
+        <h2>Staff Page</h2>
+        <h3>Hello, <span id="staffNameSpan"></span></h3>
+        <br />
+      </div>
+      <!-- student and parent div -->
+      <div id="studentDiv">
+        <h1>Sri-Educations Telangana Management</h1>
+        <hr />
+        <h2>Student/Parent Page</h2>
+        <br />
+        <a href="#admissionForm">Click to go to Admission Form</a>
+        <br />
+        <br />
+        We at Sri-Educations will appreciate if you would send your ward to our
+        school. <br />
+        We take care and help your ward bond with the topics of the subjects and
+        help them improve in them. <br /><br />
+        There are 30+ branches in Telangana. Our institutions is available in
+        Telangana, Andhra Pradesh, Maharastra and Madhya Pradesh. <br />
+        <br />
+        Alongside studies, we also provide extra curricular activities. <br />
+        We also celebrate cultural festivals for students to not study all the
+        time and have fun along with studies!
+        <br />
+        <br />
+        Our institutions is available for VI to X classes to prepare students to
+        college.
+        <br />
+        <br />
+        These are the fee structures(Per Year): <br />
+        <ul>
+          <li>Tuition Fee 1: ₹34,000</li>
+          <li>Tuition Fee 2: ₹35,500</li>
+          <li>Tuition Fee 3: ₹36,450</li>
+        </ul>
+        (Fee may vary depending upon class and taxes.)
+        <br />
+        <br />
+        <div id="admissionForm">
+          <fieldset>
+            <legend>Admission Form</legend>
+
+            <label for="studentName">Name:</label>
+            <input
+              type="text"
+              id="stuentName"
+              name="stuentName"
+              required
+            /><br />
+
+            <label for="joiningClass"
+              >The Class that student wants to join in:</label
+            >
+            <input
+              type="number"
+              id="joiningClass"
+              name="joiningClass"
+              required
+              min="1"
+              max="12"
+            /><br />
+
+            <label for="studentAge">Age:</label>
+            <input
+              type="number"
+              id="studentAge"
+              name="studentAge"
+              required
+            /><br />
+
+            <label for="studentBranch"
+              >Branch in which student want to be admitted to:</label
+            >
+            <input
+              type="text"
+              id="studentBranch"
+              name="studentBranch"
+              required
+            /><br />
+
+            <label for="parentEmail">Email of a Parent:</label>
+            <input
+              type="parentEmail"
+              id="parentEmail"
+              name="parentEmail"
+              required
+            /><br />
+            <br />
+            <input
+              type="submit"
+              id="submitAdmissionButton"
+              onclick="submitAdmissionForm()"
+              value="Submit Admission Form"
+            />
+          </fieldset>
+        </div>
+        <br />
+      </div>
+    </div>
+    <footer>
+      &copy;Copyright, Sai Sriyan Nakka. <br />
+      Version 0.7
+    </footer>
+  </body>
+</html>
